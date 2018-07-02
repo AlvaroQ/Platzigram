@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:fitsSystemWindows="true"
+    android:background="@color/colorWhite"
+    tools:context="com.alvaroquintana.platzigram.CreateAccountActivity">
+
+    <include layout="@layout/actionbar_toolbar" />
+
+    <!-- layout_behavior: Para que el scroll respete el toolbar superoir -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin">
+
+            <!-- CORREO -->
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/EditTextBlack">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/edittextCorreo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/correo"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- NOMBRE -->
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/EditTextBlack" >
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/edittextNombre"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/nombre"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- USUARIO -->
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/EditTextBlack" >
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/edittextUsuario"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/usuario"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- CONTRASEÑA -->
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/EditTextBlack" >
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/edittextPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/password_txt"
+                    android:inputType="textPassword"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- RECORDAR CONTRASEÑA -->
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/EditTextBlack" >
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/edittextRecordarPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/remember_password"
+                    android:inputType="textPassword"/>
+            </android.support.design.widget.TextInputLayout>
+
+
+            <Button
+                android:id="@+id/btnRegistrar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/registrar"
+                android:theme="@style/RiseButtonDark"
+                android:layout_marginTop="@dimen/activity_vertical_margin"/>
+
+        </LinearLayout>
+    </ScrollView>
+</android.support.design.widget.CoordinatorLayout>
