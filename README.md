@@ -1,2 +1,2 @@
 # Platzigram
-curso platzi
+
