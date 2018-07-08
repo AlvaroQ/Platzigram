@@ -8,7 +8,7 @@
     android:gravity="center_horizontal"
     android:fitsSystemWindows="true"
     android:background="@color/colorWhite"
-    tools:context="com.alvaroquintana.platzigram.CreateAccountActivity">
+    tools:context="com.alvaroquintana.platzigram.activity.CreateAccountActivity">
 
     <include layout="@layout/actionbar_toolbar" />
 

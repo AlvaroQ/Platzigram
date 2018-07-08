@@ -1,10 +1,12 @@
-package com.alvaroquintana.platzigram;
+package com.alvaroquintana.platzigram.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+
+import com.alvaroquintana.platzigram.R;
 
 public class CreateAccountActivity extends AppCompatActivity {
     @Override

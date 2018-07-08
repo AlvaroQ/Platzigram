@@ -5,7 +5,8 @@
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
     android:background="@color/colorPrimary"
-    tools:context="com.alvaroquintana.platzigram.LoginActivity">
+    android:fitsSystemWindows="true"
+    tools:context="com.alvaroquintana.platzigram.activity.LoginActivity">
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -74,7 +75,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/login"
-                    android:theme="@style/RiseButtonDark"/>
+                    android:theme="@style/RiseButtonDark"
+                    android:onClick="goHome"/>
 
                 <RelativeLayout
                     android:layout_width="match_parent"

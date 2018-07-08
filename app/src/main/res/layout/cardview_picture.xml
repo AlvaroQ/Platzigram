@@ -4,7 +4,8 @@
     android:id="@+id/pictureCard"
     android:layout_width="match_parent"
     android:layout_height="@dimen/height_cardview"
-    app:cardCornerRadius="@dimen/cornerradius_cardview">
+    app:cardCornerRadius="@dimen/cornerradius_cardview"
+    android:layout_marginTop="@dimen/carview_margintop">
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -23,7 +24,8 @@
             android:layout_gravity="bottom"
             android:orientation="vertical"
             android:paddingBottom="@dimen/activity_vertical_margin"
-            android:paddingLeft="@dimen/activity_vertical_margin">
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:background="@color/background_textcard">
 
             <TextView
                 android:id="@+id/userNameCard"
@@ -31,7 +33,8 @@
                 android:layout_height="wrap_content"
                 android:text="@string/username_card"
                 android:textColor="@color/colorWhite"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:textSize="@dimen/textsize_username_cardview"/>
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -42,41 +45,36 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/time_card"
-                    android:textColor="@color/colorWhite"  />
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/textsize_username_cardview" />
                 <TextView
                     android:id="@+id/daysCard"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/activity_time_horizontal_margin"
                     android:text="@string/days_card"
-                    android:textColor="@color/colorWhite"  />
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/textsize_username_cardview"  />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <ImageView
+                <CheckBox
                     android:id="@+id/heartCard"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/heart"/>
+                    android:button="@drawable/checkbox_selector"/>
 
                 <TextView
-                    android:id="@+id/numberlikesCard"
+                    android:id="@+id/likeNumberCard"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/activity_time_horizontal_margin"
                     android:text="@string/number_likes_card"
-                    android:textColor="@color/colorWhite"  />
-
-                <TextView
-                    android:id="@+id/likesCard"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/activity_time_horizontal_margin"
-                    android:text="@string/likes_card"
-                    android:textColor="@color/colorWhite"  />
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/textsize_username_cardview" />
             </LinearLayout>
 
 
