@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">Platzigram</string>
+    <string name="menu_search">Search</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_yo">Yo</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email completions."</string>
+    <string name="crea_cuenta"> crea una aquí</string>
+    <string name="no_tiengo_cuenta">¿No tienes cuenta?, </string>
+    <string name="login">Login</string>
+    <string name="nombre_de_usuario">Nombre de usuario</string>
+    <string name="password_txt">Password</string>
+    <string name="correo">Correo</string>
+    <string name="nombre">Nombre</string>
+    <string name="usuario">Usuario</string>
+    <string name="remember_password">Recordar contraseña</string>
+    <string name="registrar">Registrar</string>
+    <string name="create_account">Crear cuenta</string>
+    <string name="username_card">Uriel Ramirez</string>
+    <string name="time_card">Hace</string>
+    <string name="days_card">4 días</string>
+    <string name="number_likes_card">10 me gustas</string>
+    <string name="day">día</string>
+    <string name="days">días</string>
+    <string name="likes_card_singular">me gusta</string>
+    <string name="likes_card_plural">me gustas</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="titleImageDetail">\"Todo copas en la playa\"</string>
+    <string name="secondword_detail">10 me gusta</string>
+    <string name="lorem">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</string>
+</resources>
