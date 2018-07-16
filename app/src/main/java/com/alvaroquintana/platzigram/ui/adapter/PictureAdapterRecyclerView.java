@@ -1,4 +1,4 @@
-package com.alvaroquintana.platzigram.adapter;
+package com.alvaroquintana.platzigram.ui.adapter;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -15,12 +15,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.alvaroquintana.platzigram.R;
-import com.alvaroquintana.platzigram.activity.PictureDetailActivity;
+import com.alvaroquintana.platzigram.ui.activity.PictureDetailActivity;
 import com.alvaroquintana.platzigram.model.Picture;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
-import com.alvaroquintana.platzigram.R;
 
 public class PictureAdapterRecyclerView extends RecyclerView.Adapter<PictureAdapterRecyclerView.PictureViewHolder> {
 

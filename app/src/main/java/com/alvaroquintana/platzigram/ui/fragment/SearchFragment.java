@@ -1,4 +1,4 @@
-package com.alvaroquintana.platzigram.view.fragment;
+package com.alvaroquintana.platzigram.ui.fragment;
 
 
 import android.os.Bundle;

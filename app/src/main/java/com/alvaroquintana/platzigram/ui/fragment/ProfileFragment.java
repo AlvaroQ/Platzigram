@@ -1,4 +1,4 @@
-package com.alvaroquintana.platzigram.view.fragment;
+package com.alvaroquintana.platzigram.ui.fragment;
 
 
 import android.os.Bundle;
@@ -12,7 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.alvaroquintana.platzigram.R;
-import com.alvaroquintana.platzigram.adapter.PictureAdapterRecyclerView;
+import com.alvaroquintana.platzigram.ui.adapter.PictureAdapterRecyclerView;
 import com.alvaroquintana.platzigram.model.Picture;
 
 import java.util.ArrayList;

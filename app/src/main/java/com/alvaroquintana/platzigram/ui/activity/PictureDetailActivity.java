@@ -1,4 +1,4 @@
-package com.alvaroquintana.platzigram.activity;
+package com.alvaroquintana.platzigram.ui.activity;
 
 import android.os.Build;
 import android.support.design.widget.CollapsingToolbarLayout;

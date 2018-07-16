@@ -1,4 +1,4 @@
-package com.alvaroquintana.platzigram.view;
+package com.alvaroquintana.platzigram.ui.activity;
 
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -6,12 +6,11 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
 
 import com.alvaroquintana.platzigram.R;
-import com.alvaroquintana.platzigram.view.fragment.HomeFragment;
-import com.alvaroquintana.platzigram.view.fragment.ProfileFragment;
-import com.alvaroquintana.platzigram.view.fragment.SearchFragment;
+import com.alvaroquintana.platzigram.ui.fragment.HomeFragment;
+import com.alvaroquintana.platzigram.ui.fragment.ProfileFragment;
+import com.alvaroquintana.platzigram.ui.fragment.SearchFragment;
 
 public class ContainerActivity extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package com.alvaroquintana.platzigram.activity;
+package com.alvaroquintana.platzigram.ui.activity;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.alvaroquintana.platzigram.R;
-import com.alvaroquintana.platzigram.view.ContainerActivity;
 
 /**
  * A login screen that offers login via email/password.
