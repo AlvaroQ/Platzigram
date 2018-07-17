@@ -27,6 +27,14 @@ public class ProfileFragment extends Fragment {
         // Required empty public constructor
     }
 
+    public static ProfileFragment newInstance() {
+        return new ProfileFragment();
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

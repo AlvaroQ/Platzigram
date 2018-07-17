@@ -2,10 +2,14 @@ package com.alvaroquintana.platzigram.ui.activity;
 
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.Window;
+import android.view.WindowManager;
 
 import com.alvaroquintana.platzigram.R;
 import com.alvaroquintana.platzigram.ui.fragment.HomeFragment;
@@ -18,49 +22,56 @@ public class ContainerActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_container);
+        coloredSystemBar();
+        initialFragment();
+        naavigationBottomBar();
+    }
 
+    private void naavigationBottomBar() {
         BottomNavigationView bottomNavigationView = findViewById(R.id.navigationView);
-        fragmentToHomeFadeTransition();
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 int id = item.getItemId();
+                Fragment selectedFragment = null;
                 switch (id) {
-                    case R.id.navigation_search:
-                        fragmentToSearchFadeTransition();
-                        break;
-
                     case R.id.navigation_home:
-                        fragmentToHomeFadeTransition();
+                        selectedFragment = HomeFragment.newInstance();
                         break;
-
                     case R.id.navigation_profile:
-                        fragmentToProfileFadeTransition();
+                        selectedFragment = ProfileFragment.newInstance();
+                        break;
+                    case R.id.navigation_search:
+                        selectedFragment = SearchFragment.newInstance();
                         break;
                 }
-                return false;
+                getSupportFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.container, selectedFragment)
+                        .commit();
+                return true;
             }
         });
     }
 
-    public void fragmentToSearchFadeTransition() {
-        SearchFragment searchFragment = new SearchFragment();
-        getSupportFragmentManager().beginTransaction().replace(R.id.container, searchFragment)
-                .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
-                .addToBackStack(null).commit();
+    private void initialFragment() {
+        Fragment selectedFragment = HomeFragment.newInstance();
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.container, selectedFragment)
+                .commit();
     }
 
-    public void fragmentToHomeFadeTransition() {
-        HomeFragment homeFragment = new HomeFragment();
-        getSupportFragmentManager().beginTransaction().replace(R.id.container, homeFragment)
-                .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
-                .addToBackStack(null).commit();
-    }
+    private void coloredSystemBar(){
+        Window window = getWindow();
 
-    public void fragmentToProfileFadeTransition() {
-        ProfileFragment profileFragment = new ProfileFragment();
-        getSupportFragmentManager().beginTransaction().replace(R.id.container, profileFragment)
-                .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
-                .addToBackStack(null).commit();
+        // clear FLAG_TRANSLUCENT_STATUS flag:
+        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+
+        // add FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS flag to the window
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+
+        // finally change the color
+        window.setStatusBarColor(ContextCompat.getColor(this, R.color.colorPrimaryDark));
     }
 }
